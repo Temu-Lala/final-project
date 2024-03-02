@@ -1,8 +1,15 @@
 .container 
 {
     display: flex;
+   
 }
+.bodypart-navbar
+{
+    flex: 4;
+    flex-direction: column;
+    
 
+}
 .sidebar
 {
     flex: 1;
@@ -10,9 +17,8 @@
     position: sticky;
 }
 
-.navbar
+.bodypart
 {
-    flex: 4;
     overflow-y: scroll;
 
 }

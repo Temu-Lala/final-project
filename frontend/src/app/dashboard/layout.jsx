@@ -11,13 +11,19 @@ function layout({children}) {
         <div className='sidebar'>
         <Sidebar/>
         </div>
+        <div className='bodypart-navbar'>
         <div className='navbar'> 
          <Navbar/>
 
         </div>
-<div>
+       
+<div className='bodypart'>
+
     {children}
 </div>
+
+        </div>
+       
 
 
     </div>
