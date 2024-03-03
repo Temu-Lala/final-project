@@ -6,18 +6,18 @@ import '../ui/globals.css'
 import '../ui/dashboard/dashboardui.css'
 function layout({children}) {
   return (
-    <div className='container'>
+    <div className='flex'>
 
-        <div className='sidebar'>
+        <div className=' sidebar '>
         <Sidebar/>
         </div>
         <div className='bodypart-navbar'>
-        <div className='navbar'> 
+        <div className=''> 
          <Navbar/>
 
         </div>
        
-<div className='bodypart'>
+<div className='bodypart w-full'>
 
     {children}
 </div>

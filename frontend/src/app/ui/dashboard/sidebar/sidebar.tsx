@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
 
-import '../dashboardui.css'
 import '../sidebar/sidebar.css'
 import HomeIcon from '@mui/icons-material/Home';
 import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
@@ -87,25 +86,30 @@ const Menuitems = {
 export default function sidebar() {
   return (
 
-    <div className='sidebarcontainer' ><span className='name'>Debre Birhan</span> 
-<Image src={Logo} alt='logo' width={100} height={100} objectFit='cover' style={{borderRadius:"50%"}}/>
-    <ul>
-    {Menuitems.list.map((item)=>
-      (
-        <li key={item.title}>
-         
-          <Link href={item.path}> {item.icon}{item.title}
-          
-          </Link>
-         <div className='line'>
+    <div className='flex sidebar '>
+    
+  
 
-           </div>
-        
-         
-        </li>
-      ))}
-    </ul>
-    </div>
+<aside  className=" fixed    top-0 left-0 z-40  h-screen transition-transform -translate-x-full sm:translate-x-0" >
+   <div className="fixed  h-full  flex-1 px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+   <nav className=''>
+  <ul>
+    {Menuitems.list.map((item) => (
+      <li key={item.id}>
+        <Link href={item.path}>
+          {item.title}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+   </div>
+</aside>
+
+
+</div>
+
   )
 }
 
