@@ -8,8 +8,8 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import SettingsIcon from '@mui/icons-material/Settings';
 export default function navbar() {
   return (
-<nav className=" flex w-full  fixed z-50  bg-[#242526] p-1 h-12">
-  <div className="  flex   justify-between ">
+<nav className="  w-full  fixed z-50   bg-[#242526] p-1 h-12">
+  <div className="  flex    ">
   <div className="flex items-center space-x-2">
   <Image
         src=""
@@ -20,7 +20,7 @@ export default function navbar() {
       />
     <input className="rounded-full h-6 bg-[#3A3B3C] p-4 text-xs text-gray-400 outline-none" type="text" placeholder="Search News" />
   </div>
-  <div className="relative flex justify-between gap-28  items-center">
+  <div className="relative flex   items-center">
     <div className="relative group">
       <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
 <HomeIcon/>

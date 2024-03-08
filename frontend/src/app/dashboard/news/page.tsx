@@ -1,3 +1,6 @@
+'use client'
+
+
 import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -7,77 +10,37 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import SendIcon from '@mui/icons-material/Send';
 import SearchIcon from '@mui/icons-material/Search';
+import { useState } from 'react'
+
 
 
 import './newsstyle.css'
 import { ClassNames } from '@emotion/react';
 export default function page() {
+
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+      setIsOpen(!isOpen);
+  };
+
+  const closeDropdown = () => {
+      setIsOpen(false);
+  };
+
+
+
+
   return (
-    <div className="p-relative h-screen"  style={{ width: 'background-color: #15202b' }}>
-        <div className="flex justify-center">
+    <div className="  p-relative h-screen "  style={{ width: 'background-color: #15202b' }}>
+        <div className="flex ">
 
-        {/* <header className="text-white h-12 py-4 h-auto">
-      <div style={{ width: '275px' }}>
-        <div className="overflow-y-auto fixed h-screen pr-3" style={{ width: '275px' }}>
-          <Link href="#" passHref>
-            
-              <svg viewBox="0 0 24 24" className="h-8 w-8 text-white ml-3" fill="currentColor">
-                <g>
-                  <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path>
-                </g>
-              </svg>
-              <h1>Welcome to Next.js</h1>
-            
-          </Link>
+        
 
-          <nav className="mt-5 px-2">
-          
-            
-              <Link href="#" className="mt-1 group flex items-center px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-800 hover:text-blue-300">
-                <svg
-                  className="mr-4 h-6 w-6"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                Home
-              
-            </Link>
-          </nav>
-
-          <div className="absolute" style={{ bottom: '2rem' }}>
-            <div className="flex-shrink-0 flex hover:bg-gray-800 rounded-full px-4 py-3 mt-12 mr-2">
-              
-                <Link href="#" passHref className="flex-shrink-0 group block">
-                  <div className="flex items-center">
-                    <div>
-                      <img className="inline-block h-10 w-10 rounded-full" src="https://pbs.twimg.com/profile_images/1254779846615420930/7I4kP65u_400x400.jpg" alt="" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-base leading-6 font-medium text-white">
-                        ℜ??????ℜ??????.dev
-                      </p>
-                      <p className="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
-                        @Ricardo_oRibeir
-                      </p>
-                    </div>
-                  </div>
-                
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header> */}
-
-            <div role="main">
-                <div className="flex" style={{width: '990px'}}>
-                    <section className="w-3/5 border border-y-0 border-gray-800" style={{maxWidth:'600px'}}>
+            <div className='pl-32 flex flex-4 justify-center'>
+                <div className="flex" >
+                    <section className=" border border-y-0 border-gray-800" >
                      
                     <div>
       <div className="flex justify-start">
@@ -102,7 +65,6 @@ export default function page() {
         
       </div>
 
-      <hr className="border-gray-800" />
     </div>
 
 
@@ -110,7 +72,103 @@ export default function page() {
       <li>
         <article className=" hover:bg-gray-800 transition duration-350 ease-in-out">
           <div className="flex flex-col   p-4 pb-0">
-            <div className='flex w-full h-4  justify-end '><MoreVertIcon  className = " hover:text-blue-600  "/></div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className='flex h-4  justify-end  py-6 pb-8'>
+            <div className="relative inline-block">
+                <button
+                   
+                    className=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm inline-flex items-center"
+                    onClick={toggleDropdown}
+                >
+                    <MoreVertIcon  className = " hover:text-blue-600  "/>
+                </button>
+                
+
+                {isOpen && (
+                    <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <ul role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 1
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 2
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    onClick={closeDropdown}
+                                >
+                                    Option 3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                )}
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           
             <Link href="#" className="flex-shrink-0 group block">
               <div className="flex items-center">
@@ -434,7 +492,7 @@ export default function page() {
 
 
 
-    <div className="relative text-yellow-300 w-80 p-5">
+    {/* <div className="relative text-yellow-300 w-80 p-5">
       <button type="submit" className="absolute ml-4 mt-3 mr-4">
       <SearchIcon/>
       </button>
@@ -445,10 +503,10 @@ export default function page() {
         placeholder="Search "
         className="bg-dim-700 h-10 px-10 pr-5 w-full rounded-full text-sm focus:outline-none bg-purple-white shadow  border-0"
       />
-    </div>
+    </div> */}
 
 
-    <div className="flex flex-col max-w-sm rounded-lg bg-dim-700 overflow-hidden shadow-lg m-4">
+    {/* <div className="flex flex-col max-w-sm rounded-lg bg-dim-700 overflow-hidden shadow-lg m-4">
       <div className=" mb-1 w-full">
         <div className='flex flex-row'>
           <div>          <span className=' w-full justify-center'>Folloers</span></div>
@@ -484,9 +542,9 @@ export default function page() {
       </div>
 
      
-    </div>
+    </div> */}
     
-
+{/* 
 
 
 <div className="max-w-sm rounded-lg bg-dim-700 overflow-hidden shadow-lg m-4">
@@ -626,7 +684,7 @@ Lectures Ab                    </p>
 
 
      
-    </div>
+    </div> */}
 </div>
                     </div>
                 </div>
