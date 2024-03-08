@@ -1,7 +1,9 @@
 import React from 'react'
-
+import Profile from '../profile/page'
 export default function campus() {
   return (
-    <div>campus</div>
+    <div>
+      <Profile/>
+    </div>
   )
 }

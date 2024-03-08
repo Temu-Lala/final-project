@@ -3,6 +3,8 @@ import ApartmentIcon from '@mui/icons-material/Apartment';
 import SchoolIcon from '@mui/icons-material/School';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import Lecturesprofile from './lecturesprofiles/page'
+import Link from 'next/link';
 export default function Dashboard() {
   return (
    
@@ -80,7 +82,8 @@ export default function Dashboard() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr className=' cursor-pointer' >
+                      <Link href ="/dashboard/lecturesprofiles" >
                       <td className="py-3 px-5 border-b border-blue-gray-50">
                         <div className="flex items-center gap-4">
                           <p className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 font-bold">Lecture Ab</p>
@@ -96,6 +99,7 @@ export default function Dashboard() {
 
                         </div>
                       </td>
+                      </Link>
                     </tr>
                     <tr>
                       <td className="py-3 px-5 border-b border-blue-gray-50">

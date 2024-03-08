@@ -77,7 +77,14 @@ const Menuitems = {
 {
   id:3,
   title:"Logout",
-  path:"/dashboard/logout",
+  path:"/logout",
+  icon:<LogoutIcon/>
+
+},
+{
+  id:4,
+  title:"dashboard",
+  path:"/dashboard",
   icon:<LogoutIcon/>
 
 }]
@@ -99,13 +106,13 @@ export default function sidebar() {
 
 
 
-<div className=' sticky  '>
+<div className=' sticky   '>
 <nav className="bg-[#1f2e47] h-screen   top-0 left-0 flex-1 py-6 px-4 font-[sans-serif]">
       <div className="relative">
         <a href="javascript:void(0)"><img src="https://images.pexels.com/photos/12109950/pexels-photo-12109950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="logo" className='w-full h-28' />
         </a>
       </div>
-      <div className="overflow-auto mt-6  flex flex-1 justify-between h-full ">
+      <div className=" mt-6  flex flex-1 justify-between h-full ">
       <ul className=' flex flex-col p-6 gap-6'>
     
     {Menuitems.list.map((item) => (  

@@ -1,6 +1,7 @@
 import React from 'react'
 import GoogleIcon from '@mui/icons-material/Google';
-import Dashbord from '../page'
+import Dashbord from '../dashboard/page'
+import Register from '../register/page'
 import Link from 'next/link';
 // import { useNavigation } from 'next/navigation';
 export default function Login() {
@@ -50,7 +51,7 @@ export default function Login() {
                 </div>
                 <div className="mt-4 flex items-center justify-between">
                     <span className="border-b w-1/5 md:w-1/4"></span>
-                    <a href="./dashboard/register" className="text-xs text-red-600 uppercase">or sign up</a>
+                    <Link href="../register" className="text-xs text-red-600 uppercase">or sign up</Link>
                     <span className="border-b w-1/5 md:w-1/4"></span>
                 </div>
             </div>
