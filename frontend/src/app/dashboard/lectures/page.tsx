@@ -1,6 +1,20 @@
-import React from 'react'
+'use client'
+
+import React , { useState }  from 'react'
 
 export default function lectures() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null); // Assuming selectedImage is a URL, hence string
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setSelectedImage(reader.result as string); // Assuming reader.result is a URL, hence string
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   return (
     <div className="bg-cream text-white min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto">
       <main className="flex-1 md:p-0 lg:pt-8 lg:px-8 md:ml-24 flex flex-col">
@@ -9,12 +23,21 @@ export default function lectures() {
         <h2 className="md:w-1/3 uppercase tracking-wide text-sm sm:text-lg mb-6">Create Your Cv </h2>
       </div>
       <form>
-      <div className=" flex flex-1  px-3 text-center">
-              <div className=" text-black button hover:bg-gold-dark text-cream mx-auto  relative cursor-pointer w-12 h-12 rounded-xl bg-white">
-                <input className="opacity-0 absolute cursor-pointer text-black  " type="file" name="profile"/>
-                 profile
-              </div>
-            </div>
+      <div className="flex flex-1 px-3 text-center">
+      <div className="button w-36 h-36 border-2 hover:border-yellow-500 text-cream mx-auto relative cursor-pointer rounded-xl bg-transparent">
+        <input
+          className="opacity-0 w-36 h-36 absolute cursor-pointer text-black"
+          type="file"
+          name="profile"
+          onChange={handleImageChange}
+        />
+        {selectedImage ? (
+          <img className="w-36 h-36 object-cover rounded-xl" src={selectedImage} alt="Selected" />
+        ) : (
+          <span>profile</span>
+        )}
+      </div>
+    </div>
         <div className=" md:flex mb-8">
       
           <div className="md:w-1/3">
@@ -70,7 +93,7 @@ export default function lectures() {
 
 
 
-        <div className="flex flex-1 md:flex mb-8">
+        <div className=" md:flex mb-8">
       
           <div className="md:w-1/3">
             <legend className="uppercase tracking-wide text-sm">skils </legend>

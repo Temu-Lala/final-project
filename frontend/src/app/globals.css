@@ -22,3 +22,6 @@ body {
   color: var(--text);
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

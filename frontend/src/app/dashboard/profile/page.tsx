@@ -85,7 +85,7 @@ export default function page() {
           </div>
           <div className="mt-3">
            <span className=' text-2xl'>Bio</span>
-            <p className="text-white leading-tight mb-2">Image with src "/_next/static/media/dbu.883661cd.png" has legacy prop "objectFit". Did you forget to run the codemod?
+            <p className="text-white  break-all leading-tight mb-2">Image with src "/_next/static/media/dbu.883661cd.png" has legacy prop "objectFit". Did you forget to run the codemod?
 Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13     
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
  </p>
@@ -102,28 +102,29 @@ Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
               </span>
             </div>
           </div>
-          <div className="pt-3 flex justify-start items-start w-full divide-x divide-gray-800 divide-solid">
-            <div className="text-center pr-3">
-              <span className="font-bold text-white">520</span>
-              <span className="text-gray-600"> lectures</span>
-            </div>
-            <div className="text-center pr-3">
-              <span className="font-bold text-white">520</span>
-              <span className="text-gray-600"> campus</span>
-            </div>
-            <div className="text-center pr-3">
-              <span className="font-bold text-white">520</span>
-              <span className="text-gray-600"> collage</span>
-            </div>
-            <div className="text-center pr-3">
-              <span className="font-bold text-white">520</span>
-              <span className="text-gray-600"> department</span>
-            </div>
-            <div className="text-center px-3">
-              <span className="font-bold text-white">23,4m </span>
-              <span className="text-gray-600"> Followers</span>
-            </div>
-          </div>
+          <div className="pt-3 flex flex-wrap justify-center items-center w-full divide-x divide-gray-800 divide-solid">
+  <div className="text-center pr-3 mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <span className="font-bold text-white">520</span>
+    <span className="text-gray-600"> lectures</span>
+  </div>
+  <div className="text-center pr-3 mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <span className="font-bold text-white">520</span>
+    <span className="text-gray-600"> campus</span>
+  </div>
+  <div className="text-center pr-3 mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <span className="font-bold text-white">520</span>
+    <span className="text-gray-600"> collage</span>
+  </div>
+  <div className="text-center pr-3 mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <span className="font-bold text-white">520</span>
+    <span className="text-gray-600"> department</span>
+  </div>
+  <div className="text-center px-3 mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <span className="font-bold text-white">23,4m</span>
+    <span className="text-gray-600"> Followers</span>
+  </div>
+</div>
+
         </div>
       </div>
     
@@ -139,100 +140,87 @@ Read more: https://nextjs.org/docs/messages/next-image-upgrade-to-13
 
 
 
-      <div className=" bg-transparent p-1 h-auto   ">
-  <div className="flex items-center space-x-2 ">
-  
-  <div className="relative flex justify-evenly  w-full items-center spa ">
+      <div className=" bg-transparent p-1 h-auto      ">
+      <div className="flex flex-wrap justify-center items-center space-x-2">
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
     <div className="relative group">
       <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-<span>News</span>
-<AddIcon/>
+        <span>News</span>
+        <AddIcon />
       </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
-    </div>
-    <div className="relative group">
-      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-<span> Pin</span>
-<PushPinIcon/>
-      </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out"></div>
-    </div>
-     <div className="relative group">
-      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-     <span>Messages</span>
-      <MessageIcon/>
-            </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
-    </div>
-    <div className="relative group">
-      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-      <span>Notfcations</span>
-      <CircleNotificationsIcon/>
-            </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
-    </div>
-    <div className="relative group">
-      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-      <span>Followers</span>
-      <GroupAddIcon/>
-            </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
-    </div>
-
-    <div className="relative group">
-      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
-      <span>Location</span>
-      <PlaceIcon/>
-            </div>
-        <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
-    </div>
-    
-
-
-
-
-
-
-
-
-
-
-    <div className="  flex flex-col justify-center ">
-<div className="flex items-center justify-center ">
-  <div className=" relative inline-block text-left dropdown">
-    <span className="rounded-md shadow-sm"
-      ><button className="inline-flex justify-center px-4 py-2 text-sm font-medium  text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800" 
-       type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
-        <span>More  <KeyboardDoubleArrowDownIcon/></span>
-        </button></span>
-    <div className=" invisible dropdown-menu transition-all duration-300 transform origin-top-right ">
-      <div className="absolute right-0 w-56 mt-2 origin-top-right bg-transparent border border-gray-200  divide-gray-100 rounded-md shadow-lg outline-none" >
-       <div className="py-1">
-          <Link href="#" className=" hover:bg-slate-500 text-white flex  w-full px-4 py-2 text-sm "  > <InfoIcon/> About</Link>
-          <Link href="#" className="hover:bg-slate-500 text-white w-full px-4 py-2 text-sm leading-5 "  ><CampaignIcon/> collage</Link>
-          <Link href="#" className="hover:bg-slate-500 text-white  px-4 py-2 text-sm "  ><SchoolIcon/>Campus </Link>
-          <Link href="#" className="hover:bg-slate-500 text-white  px-4 py-2 text-sm "  ><ClassIcon/>Departmunt </Link>
-          <Link href="#" className="hover:bg-slate-500 text-white  px-4 py-2 text-sm "  ><PsychologyIcon/>Lectures </Link>
-
-          </div>
-       </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
     </div>
   </div>
-</div>              
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <div className="relative group">
+      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
+        <span>Pin</span>
+        <PushPinIcon />
+      </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out"></div>
+    </div>
+  </div>
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <div className="relative group">
+      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
+        <span>Messages</span>
+        <MessageIcon />
+      </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
+    </div>
+  </div>
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <div className="relative group">
+      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
+        <span>Notifications</span>
+        <CircleNotificationsIcon />
+      </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
+    </div>
+  </div>
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <div className="relative group">
+      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
+        <span>Followers</span>
+        <GroupAddIcon />
+      </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
+    </div>
+  </div>
+  <div className="relative flex justify-evenly w-full items-center spa mb-3 md:mb-0 md:w-1/3 lg:w-auto">
+    <div className="relative group">
+      <div className="group-hover:bg-gray-600 p-1 group-hover:rounded-lg transition-all ease-in-out duration-300">
+        <span>Location</span>
+        <PlaceIcon />
+      </div>
+      <div className="absolute group-hover:border-b-2 group-hover:cursor-pointer mt-2 border-blue-500 w-full transition-all duration-100 ease-in-out "></div>
+    </div>
+  </div>
+</div>
+<div className="flex flex-col justify-center">
+  <div className="flex items-center justify-center ">
+    <div className="relative inline-block text-left dropdown">
+      <span className="rounded-md shadow-sm">
+        <button className="inline-flex justify-center px-4 py-2 text-sm font-medium text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800" 
+          type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
+          <span>More <KeyboardDoubleArrowDownIcon /></span>
+        </button>
+      </span>
+      <div className="invisible dropdown-menu transition-all duration-300 transform origin-top-right">
+        <div className="absolute right-0 w-56 mt-2 origin-top-right border bg-gray-800 border-gray-200 divide-gray-100 rounded-md shadow-lg outline-none">
+          <div className="py-1 flex flex-col">
+            <Link href="#" className="hover:bg-slate-500 text-white flex w-full px-4 py-2 text-sm"><InfoIcon /> About</Link>
+            <Link href="#" className="hover:bg-slate-500 text-white w-full px-4 py-2 text-sm leading-5"><CampaignIcon /> Collage</Link>
+            <Link href="#" className="hover:bg-slate-500 text-white px-4 py-2 text-sm"><SchoolIcon /> Campus</Link>
+            <Link href="#" className="hover:bg-slate-500 text-white px-4 py-2 text-sm"><ClassIcon /> Department</Link>
+            <Link href="#" className="hover:bg-slate-500 text-white px-4 py-2 text-sm"><PsychologyIcon /> Lectures</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
-
-
-
-
-
-
-
-
-  </div>
-  
-  
-  </div>
 
   
 <div className=" py-6 flex flex-col justify-center sm:py-12">

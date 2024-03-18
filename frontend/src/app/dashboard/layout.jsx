@@ -7,7 +7,7 @@ function layout({children}) {
   return (
     <div className='flex'>
 
-        <div className=' w-1/5 h-screen  overscroll-none sticky '>
+        <div className=' w-1/5 h-screen  top-0  overscroll-none sticky '>
         <Sidebar/>
         </div>
         <div className='   flex    '> 
@@ -15,7 +15,7 @@ function layout({children}) {
 
         </div>
      
-<div className=' pt-24  w-screen overflow-y-scroll scroll-smooth'>
+<div className='hide-scrollbar pt-24  w-screen overflow-y-scroll  scroll-smooth  '>
 
     {children}
 </div>

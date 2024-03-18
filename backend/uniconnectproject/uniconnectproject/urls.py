@@ -185,10 +185,10 @@ class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
 class CampusRegistrationRequestViewset(viewsets.ModelViewSet):
-    queryset = Course.objects.all()
+    queryset = CampusRegistrationRequest.objects.all()
     serializer_class = CampusRegistrationRequestSerializer
 class FriendRequestViewSet(viewsets.ModelViewSet):
-    queryset = Course.objects.all()
+    queryset = FriendRequest.objects.all()
     serializer_class = FriendRequestSerializer
 
 
