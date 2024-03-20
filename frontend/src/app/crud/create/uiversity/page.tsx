@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { useRouter } from 'next/router';
-
+import AddLocationIcon from '@mui/icons-material/AddLocation';
 import 'react-datepicker/dist/react-datepicker.css'; // Import CSS for styling
 import Link from 'next/link';
 
@@ -208,7 +208,9 @@ export default function lectures() {
             <div className="md:flex-1 md:pr-3">
               <label className="block uppercase tracking-wide text-charcoal-darker text-xs font-bold">Set Locations</label>
               <Link href="http://localhost:3000/crud/create/location">
-            <button className="w-full bg-white shadow-inner h-24 p-4 border-0 text-black" > set locations</button>
+
+            <button className="w-full bg-white shadow-inner h-24 p-4 border-0 text-black" >             <AddLocationIcon style={{ fontSize: '3rem', color:'blue'  }} />
+ set locations</button>
             </Link>
             </div>
           </div>

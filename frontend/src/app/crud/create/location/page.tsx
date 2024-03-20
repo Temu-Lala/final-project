@@ -10,7 +10,6 @@ const RedirectButton = () => {
   };
 
   const handleOpenMap = () => {
-
     window.open(url, '_blank');
   };
 
@@ -30,47 +29,49 @@ const RedirectButton = () => {
   };
 
   return (
-    <div className='flex w-screen justify-between  h-screen'>
-      <div className='flex  w-full justify-between  h-screen flex-col gap-12'>
-      <div className=' flex  justify-center  w-80  text-black bg-slate-200 border hover:bg-gray-800 hover:text-white   rounded-xl '>
-      <button onClick={handleOpenMap} className='h-48  w-full justify-center'>
-        Open Google Maps
-      </button>
-      </div>
-        <div className='flec w-full'>
-      <textarea className='flex justify-center  w-full   pl-12 text-black' 
-      rows={10}
-      cols={40}
-        type="text" 
-        defaultValue={""}
-        onChange={handleChange} 
-        placeholder="Enter Google Maps URL" 
-        
-      >
-         </textarea>
-      </div>
-     <div className=' flex flex-col'>
-     <div>           <span className=' text-6xl' >Google Maps:</span>
-</div>
-      {savedUrl && (
-        <div className=' flex w-full'>
-      
-          <iframe  className=' w-full  h-screen'
-            src={savedUrl} 
-         
-            style={{ border: '0' }} 
-            allowFullScreen
-          
-          ></iframe>
+    <div className="flex  flex-col lg:flex-row  h-screen">
+      <div className="lg:w-1/3 w-full  p-8  bg-transparent">
+        <div className="mb-8 ">
+          <label className="block mb-2 text-gray-700 font-semibold">Google Maps URL:</label>
+          <textarea
+            className="w-full px-4 py-2 border text-black border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+            type="text"
+            onChange={handleChange}
+            placeholder="Enter Google Maps URL"
+            rows={20}
+            cols={10}
+          ></textarea>
         </div>
-      )}
+        <div>
+          <button
+            onClick={handleOpenMap}
+            className="w-full px-8 py-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          >
+            Open Google Maps
+          </button>
+        </div>
+        <div className="mt-8">
+          <button
+            onClick={handleSaveUrl}
+            className="w-full px-8 py-4 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
+          >
+            Save Map
+          </button>
+        </div>
       </div>
-      <div>
-       <button onClick={handleSaveUrl}>
-        Save URL
-      </button>
+      <div className="w-full p-8  bg-transparent">
+        <h2 className="text-2xl font-semibold mb-4">Your Maps Preview:</h2>
+        {savedUrl && (
+          <div className="aspect-w-16 h-screen aspect-h-9">
+            <iframe
+              className="w-full h-full"
+              src={savedUrl}
+              style={{ border: '0' }}
+              allowFullScreen
+            ></iframe>
+          </div>
+        )}
       </div>
-    </div>
     </div>
   );
 };
