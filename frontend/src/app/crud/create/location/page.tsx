@@ -18,7 +18,6 @@ const RedirectButton = () => {
     setSavedUrl(iframeUrl);
   };
 
-  // Function to extract URL from iframe code
   const extractIframeUrl = (iframeCode: string): string => {
     const regex = /src="([^"]+)"/;
     const match = regex.exec(iframeCode);

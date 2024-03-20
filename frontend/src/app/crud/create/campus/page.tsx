@@ -11,11 +11,6 @@ export default function lectures() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null); // Assuming selectedImage is a URL, hence string
   const [selectedcoverImage, setSelectedcoverImage] = useState<string | null>(null); // Assuming selectedImage is a URL, hence string
 
-  // const router = useRouter();
-
-  // const goToLocations = () => {
-  //   router.push('http://localhost:3000/crud/create/locationn');
-  // };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -42,16 +37,11 @@ export default function lectures() {
 
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-  // Function to handle changes in the selected date
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
   };
 
 
-//   const gotolocations = ()=>
-//   {
-// setLocations("http://localhost:3000/crud/create/location")
-//   }
   
   return (
     <div className="bg-cream text-white min-h-screen font-sans leading-normal overflow-x-hidden lg:overflow-auto">
